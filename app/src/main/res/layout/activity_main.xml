@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_6"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/kalan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="91dp"
+        android:text="Kalan:"
+        android:textColor="#111217"
+        android:textColorHint="#3F51B5"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/puan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout2" />
+
+    <TextView
+        android:id="@+id/puan"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="35dp"
+        android:text="Puan:"
+        android:textColor="#1F2020"
+        android:textColorHint="#3F51B5"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/kalan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/kalan" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginBottom="140dp"
+        app:layout_constraintBottom_toTopOf="@+id/kalan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:onClick="catch"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/img_4" />
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:onClick="catch"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:srcCompat="@drawable/img_4" />
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:onClick="catch"
+            app:layout_column="2"
+            app:layout_row="0"
+            app:srcCompat="@drawable/img_4" />
+    </androidx.gridlayout.widget.GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
